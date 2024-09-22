@@ -1,5 +1,7 @@
 import React from 'react';
 import { FooterContainer, FooterContent, Copyright, SocialLinks, SocialIcon } from './Footer.styles';
+import linkedInIcon from '../../../assets/images/linkedin-icon.png';
+import githubIcon from '../../../assets/images/github-icon.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,18 +13,13 @@ const Footer = () => {
           &copy; {currentYear} Joseph Hartono. All rights reserved.
         </Copyright>
         <SocialLinks>
-          <SocialIcon href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter"></i>
+          <SocialIcon href="https://linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
+            <img src={linkedInIcon} alt="LinkedIn" />
           </SocialIcon>
-          <SocialIcon href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook-f"></i>
+          <SocialIcon href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
+            <img src={githubIcon} alt="GitHub" />
           </SocialIcon>
-          <SocialIcon href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
-          </SocialIcon>
-          <SocialIcon href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin-in"></i>
-          </SocialIcon>
+          {/* ... other social icons ... */}
         </SocialLinks>
       </FooterContent>
     </FooterContainer>

@@ -46,4 +46,9 @@ export const SocialIcon = styled.a`
   &:hover {
     color: #3498db;
   }
+
+  img {
+    width: 24px;  // Adjust as needed
+    height: 24px; // Adjust as needed
+  }
 `;

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Card from './Card/Card';
-import Footer from './Footer/Footer'; // Import the Footer component
+import Footer from './Footer/Footer';
 import { TypeAnimation } from 'react-type-animation';
 
 
@@ -15,7 +15,7 @@ import {
   WelcomeText,
   Subtitle,
   AboutSection,
-  CardsContainer // Ensure this is imported
+  CardsContainer
 } from './HomePage.styles';
 
 const HomePage = () => {
@@ -50,7 +50,7 @@ const HomePage = () => {
   return (
     <HomeContainer>
       <NavBar show={showNavBar}>
-        <NavLink href="/">My Journey</NavLink>
+        <NavLink href="/">Joseph Hartono</NavLink>
         <HamburgerIcon onClick={toggleNav}>☰</HamburgerIcon>
         <NavItems isOpen={isNavOpen}>
           <NavItem><NavLink onClick={() => scrollToSection(aboutRef)}>About</NavLink></NavItem>
@@ -63,25 +63,35 @@ const HomePage = () => {
       <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
-        'Impacting with Innovation',
+        'impacting with curiosity',
         1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'Impacting with Collaboration',
-        1500,
-        'Impacting with Curiosity',
-        1500,
+        'impacting with community',
+        1000,
+        'impacting with commitment',
+        1000,
+     
       ]}
       wrapper="span"
       speed={50}
-      style={{ fontSize: '1.5em', display: 'inline-block' }}
+      style={{ fontSize: '2em', display: 'inline-block' }}
       repeat={Infinity}
     />
       </WelcomeSection>
       <AboutSection ref={aboutRef}>
-        <h2>People come first.</h2>
+        <p>Scaling people through technology.</p>
         <CardsContainer>
-          <Card title="Card 1" image="image1.jpg" caption="Public Speaking" />
-          <Card title="Card 2" image="image2.jpg" caption="Technical Skills" />
-          <Card title="Card 3" image="image3.jpg" caption="Project Management" />
+          <Card 
+            title="Public Speaking" 
+            link="/public-speaking"
+          />
+          <Card 
+            title="Technical Skills" 
+            link="/technical-skills"
+          />
+          <Card 
+            title="Project Management" 
+            link="/project-management"
+          />
         </CardsContainer>
       </AboutSection>
       <Footer />

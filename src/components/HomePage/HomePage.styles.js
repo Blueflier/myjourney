@@ -94,7 +94,7 @@ export const WelcomeSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 60px); // Subtract navbar height
+  min-height: calc(100vh - 100px); // Subtract navbar height
   padding: 0rem;
 `;
 
