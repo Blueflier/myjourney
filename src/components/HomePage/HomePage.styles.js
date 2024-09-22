@@ -1,62 +1,5 @@
 import styled from 'styled-components';
 
-export const NavBar = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #000000;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
-  transform: ${({ show }) => show ? 'translateY(0)' : 'translateY(-100%)'};
-  z-index: 1000;
-`;
-
-export const NavItems = styled.ul`
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  @media (max-width: 768px) {
-    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-`;
-
-export const NavItem = styled.li`
-  margin: 0 1rem;
-
-  @media (max-width: 768px) {
-    margin: 1rem;
-  }
-`;
-
-export const NavLink = styled.a`
-  color: white;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-export const HamburgerIcon = styled.div`
-  display: none;
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
-`;
-
 export const HomeContainer = styled.div`
   min-height: 100vh;
   background-image: linear-gradient(
@@ -87,6 +30,18 @@ export const HomeContainer = styled.div`
   color: white;
   font-family: 'Arial', sans-serif;
   padding-top: 60px; // To account for the fixed navbar
+`;
+
+export const ScrollContainer = styled.div`
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 `;
 
 export const WelcomeSection = styled.section`

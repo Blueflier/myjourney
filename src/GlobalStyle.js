@@ -1,22 +1,31 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+
+  /* WebKit browsers (Chrome, Safari) */
+  html::-webkit-scrollbar, 
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
   }
 
   body {
-    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 `;
 
-export default GlobalStyles;
+export default GlobalStyle;

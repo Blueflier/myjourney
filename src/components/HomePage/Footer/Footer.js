@@ -1,7 +1,7 @@
 import React from 'react';
 import { FooterContainer, FooterContent, Copyright, SocialLinks, SocialIcon } from './Footer.styles';
-import linkedInIcon from '../../../assets/images/linkedin-icon.png';
-import githubIcon from '../../../assets/images/github-icon.png';
+import linkedInIcon from '../../../assets/icons/linkedin-icon.png';
+import githubIcon from '../../../assets/icons/github-icon.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

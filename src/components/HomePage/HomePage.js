@@ -1,15 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
+import NavBar from '../NavBar/NavBar';
 import Card from './Card/Card';
 import Footer from './Footer/Footer';
 import { TypeAnimation } from 'react-type-animation';
 
 
 import {
-  NavBar,
-  NavItems,
-  NavItem,
-  NavLink,
-  HamburgerIcon,
   HomeContainer,
   WelcomeSection,
   WelcomeText,
@@ -49,15 +45,13 @@ const HomePage = () => {
 
   return (
     <HomeContainer>
-      <NavBar show={showNavBar}>
-        <NavLink href="/">Joseph Hartono</NavLink>
-        <HamburgerIcon onClick={toggleNav}>☰</HamburgerIcon>
-        <NavItems isOpen={isNavOpen}>
-          <NavItem><NavLink onClick={() => scrollToSection(aboutRef)}>About</NavLink></NavItem>
-          <NavItem><NavLink href="#projects">Projects</NavLink></NavItem>
-          <NavItem><NavLink href="#contact">Contact</NavLink></NavItem>
-        </NavItems>
-      </NavBar>
+      <NavBar 
+        show={showNavBar}
+        toggleNav={toggleNav}
+        isNavOpen={isNavOpen}
+        scrollToSection={scrollToSection}
+        aboutRef={aboutRef}
+      />
       <WelcomeSection>
         <WelcomeText>It's all about</WelcomeText>
       <TypeAnimation
